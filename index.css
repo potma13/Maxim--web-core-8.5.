@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'TT Lakes Neue Trial', sans-serif;
+    color: #1B1C21;
+}
+.brand-container {
+    width: 320px;
+}
+.brand__header {
+    padding: 16px;
+    background-image: linear-gradient(90deg, #F8F8F8, #FFFFFF);
+}
+.brand__content {
+    padding: 16px;
+    background-color: #F8F8F8;
+}
+.brand__title {
+    color: #7E7E82;
+    text-transform: uppercase;
+}
+.brand__box {
+    display: flex;
+    padding: 20px 16px 20px 16px;
+    background-color: white;
+    border-radius: 6px;
+    width: 240px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    flex-shrink: 0;
+}
+.scroll-menu {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 20px;
+}
+.scroll-menu::-webkit-scrollbar {
+    display: none;
+}
+.expand {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 24px;
+    cursor: pointer;
+    width: 150px;
+}
