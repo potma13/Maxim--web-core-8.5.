@@ -76,3 +76,65 @@ window.addEventListener('resize', function() {
 
 // Инициализация при загрузке
 initElements();
+
+let swiperinit = false;
+let mobileswiper;
+
+function swiperOn() {
+    const mslider = document.querySelector('.brand__content');
+
+if (!mslider) return;
+
+if (window.innerWidth <= 767) {
+    if (!swiperinit) {
+        // wrap children in .swiper-wrapper
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('swiper-wrapper');
+        while (mslider.firstChild) {
+            wrapper.appendChild(mslider.firstChild);
+        }
+        mslider.appendChild(wrapper);
+
+        // add pagination
+        const pagination = document.createElement('div');
+        pagination.classList.add('swiper-pagination');
+        mslider.appendChild(pagination);
+
+        // init swiper
+        mobileswiper = new Swiper('.brand__content', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+        });
+
+        swiperinit = true;
+    }
+} else if (swiperinit) {
+    // unwrap children from .swiper-wrapper
+    const wrapper = mslider.querySelector('.swiper-wrapper');
+    if (wrapper) {
+        while (wrapper.firstChild) {
+            mslider.insertBefore(wrapper.firstChild, wrapper);
+        }
+        wrapper.remove();
+    }
+
+    // remove pagination
+    const pagination = mslider.querySelector('.swiper-pagination');
+    if (pagination) pagination.remove();
+
+    // remove inline styles from slides
+    mslider.querySelectorAll('.swiper-slide').forEach(slide => {
+        slide.removeAttribute('style');
+    });
+
+    // destroy swiper if needed
+    // mobileswiper.destroy(true, true);
+
+    swiperinit = false;
+}
+}
+
+swiperOn();
+window.addEventListener('resize', swiperOn);

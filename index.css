@@ -15,8 +15,9 @@ body {
     background-image: linear-gradient(90deg, #F8F8F8, #FFFFFF);
 }
 .brand__content {
-    padding: 16px;
+    padding: 16px 24px 44px 16px;
     background-color: #F8F8F8;
+    position: relative;
 }
 .brand__title {
     color: #7E7E82;
@@ -33,22 +34,14 @@ body {
     align-items: center;
     border: 1px solid #EAEAEA;
     flex-shrink: 0;
-}
-.scroll-menu {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    gap: 20px;
-}
-.scroll-menu::-webkit-scrollbar {
-    display: none;
+    cursor: pointer;
 }
 .expand {
     display: flex;
     gap: 15px;
     align-items: center;
     margin-top: 24px;
+    margin-left: 24px;
     cursor: pointer;
     width: 150px;
 }

@@ -1,4 +1,4 @@
-@media (max-width: 320px) {
+@media (max-width: 550px) {
     .expand {
         display: none;
     }
@@ -7,15 +7,12 @@
     .brand-container {
         width: 768px;
     }
-    .scroll-menu {
-        display: grid;
-        white-space: normal;
-        overflow-x: visible;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     .brand__content {
         height: auto;
         padding: 24px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .brand__header {
         padding: 24px;
@@ -28,18 +25,16 @@
     .brand-container {
         width: 1120px;
     }
-    .scroll-menu {
-        display: grid;
-        white-space: normal;
-        overflow-x: visible;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
     .brand__content {
         height: auto;
-        padding: 32px;
+        padding: 24px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
     }
     .brand__header {
-        padding: 32px;
+        padding: 24px;
     }
     .brand__box:nth-last-child(-n+3) {
         display: none;
