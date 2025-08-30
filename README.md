@@ -1,4 +1,1 @@
-# Помогите реализовать слайдер swiper, у меня не вышло. При инициировании его в мой код, код ломается. А именно меняются размеры блоков с брендами. 
-Я думаю это из-за встроенных стилей в css файле swiper (href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"), но как их отключить или поменять я не понимаю.
-
 # [potma13.github.io/Maxim--web-core-8.5.](https://potma13.github.io/Maxim--web-core-8.5./)
